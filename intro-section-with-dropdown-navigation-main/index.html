@@ -1,39 +1,249 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    @import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+    * {
+      font-family: Epilogue;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: hsl(0, 0%, 41%);
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    header {
+      display: flex;
+      flex-direction: row;
+
+      padding: 5px 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      margin-right: 50px;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100vw;
+    }
+
+    nav>* {
+      color: hsl(0, 0%, 41%);
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .nav_left div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav_right {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 30px;
+    }
+
+    ul {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .feaLi {
+      display: flex;
+      flex-direction: column;
+    }
+
+    li {
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+    }
+
+    li img {
+      margin-right: 13px;
+    }
+
+
+
+    .reg {
+      border: 1px solid hsl(0, 0%, 41%);
+      border-radius: 10px;
+
+      padding: 10px 20px;
+    }
+
+    section {
+      display: flex;
+      flex-direction: row;
+
+      justify-content: center;
+      gap: 10vw;
+    }
+
+    .title {
+      font-size: 4.5vw;
+      font-weight: 700;
+
+      margin-top: 10vw;
+
+    }
+
+    .content {
+      font-size: 1.5vw;
+      font-weight: 500;
+      color: hsl(0, 0%, 41%);
+      margin: 5vw 0;
+    }
+
+    .content p {
+      margin: 5px;
+    }
+
+    .learnmore {
+      background-color: hsl(0, 0%, 8%);
+      width: 13vw;
+      max-height: 80px;
+      height: 4vw;
+      border-radius: 10px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin-bottom: 5vw;
+    }
+
+    .learnmore a {
+      color: hsl(0, 0%, 98%);
+      font-size: 1.1vw;
+    }
+
+    .client {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .client img {
+      height: 2vw;
+    }
+
+    .sec_right {
+      margin-top: 20px;
+      width: 33vw;
+      height: 45vw;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+
+      margin-top: 10px;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
 
-  Features
-  Company
-  Careers
-  About
+  <header>
+    <div class="logo"><img src="./images/logo.svg"></div>
+    <nav>
+      <div class="nav_left">
+        <div class="feature">Feature<img src="./images/icon-arrow-down.svg">
+          <ul>
+            <div class="feaLi">
+              <li><img src="./images/icon-todo.svg"> TodoList</li>
+              <li><img src="./images/icon-calendar.svg"> Calendar</li>
+              <li><img src="./images/icon-reminders.svg"> Reminders</li>
+              <li><img src="./images/icon-planning.svg"> Planning</li>
+            </div>
+          </ul>
+        </div>
+        <div class="company">Company<img src="./images/icon-arrow-down.svg">
+          <ul>
+            <div class="comLi">
+              <li>History</li>
+              <li>Our team</li>
+              <li>Blog</li>
+            </div>
+          </ul>
+        </div>
+        <div>Careers</div>
+        <div>About</div>
+      </div>
+      <div class="nav_right">
+        <a href="#">Login</a>
+        <a href="#" class="reg">Register</a>
+      </div>
+    </nav>
+  </header>
+  <section>
+    <div class="sec_left">
+      <div class="title">Make <br> remote work</div>
+      <div class="content">
+        <p>Get your team in sync, no matter your location.</p>
+        <p>Streamline processes, create team rituals, and</p>
+        <p>watch productivity soar.</p>
+      </div>
+      <div class="learnmore"> <a href="#">Learn more</a></div>
+      <div class="client">
+        <img src="./images/client-databiz.svg">
+        <img src="./images/client-audiophile.svg">
+        <img src="./images/client-meet.svg">
+        <img src="./images/client-maker.svg">
+      </div>
+    </div>
 
-  Login
-  Register
+    <img src="./images/image-hero-desktop.png" class="sec_right">
 
-  Make remote work
+  </section>
 
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
-  
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">JSY</a>.
   </div>
+
+  <script>
+
+  </script>
 </body>
+
 </html>
