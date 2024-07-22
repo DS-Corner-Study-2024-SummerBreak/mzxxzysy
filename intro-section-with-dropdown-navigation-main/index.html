@@ -31,11 +31,16 @@
       }
     }
 
+    body {
+      position: relative;
+      bottom: 75px;
+    }
+
     header {
       display: flex;
       flex-direction: row;
 
-      padding: 5px 20px;
+      padding: 0px 20px;
     }
 
     .logo {
@@ -62,11 +67,13 @@
       }
     }
 
-    .nav_left div {
+    .nav_left {
       display: flex;
-      flex-direction: row;
       align-items: center;
-      gap: 30px;
+    }
+
+    .nav_left>div {
+      margin-left: 35px;
     }
 
     .nav_right {
@@ -76,28 +83,61 @@
       gap: 30px;
     }
 
-    ul {
-      padding: 0;
-      display: flex;
-      flex-direction: column;
+    .feature img,
+    .company img {
+      margin-left: 8px;
     }
 
-    .feaLi {
-      display: flex;
-      flex-direction: column;
+    ul {
+      padding: 0;
     }
 
     li {
       list-style-type: none;
-      display: flex;
-      flex-direction: row;
     }
 
     li img {
       margin-right: 13px;
     }
 
+    .feaUl {
+      position: relative;
+      top: 75px;
+    }
 
+    .comUl {
+      position: relative;
+      top: 65px;
+    }
+
+
+    .feaLi,
+    .comLi {
+      display: block;
+      background-color: white;
+      padding: 15px;
+
+      border-radius: 10px;
+      box-shadow: 2px 2px 3px 1px hsl(0, 0%, 80%);
+      margin-top: 10px;
+    }
+
+    .feaLi {
+      position: relative;
+      right: 50px;
+    }
+
+    .comLi {
+      position: relative;
+      right: 10px;
+    }
+
+    .feaLi li,
+    .comLi li {
+      display: flex;
+      align-items: center;
+      margin: 10px 0px;
+    }
 
     .reg {
       border: 1px solid hsl(0, 0%, 41%);
@@ -117,9 +157,7 @@
     .title {
       font-size: 4.5vw;
       font-weight: 700;
-
       margin-top: 10vw;
-
     }
 
     .content {
@@ -187,25 +225,23 @@
     <div class="logo"><img src="./images/logo.svg"></div>
     <nav>
       <div class="nav_left">
-        <div class="feature">Feature<img src="./images/icon-arrow-down.svg">
-          <ul>
-            <div class="feaLi">
-              <li><img src="./images/icon-todo.svg"> TodoList</li>
-              <li><img src="./images/icon-calendar.svg"> Calendar</li>
-              <li><img src="./images/icon-reminders.svg"> Reminders</li>
-              <li><img src="./images/icon-planning.svg"> Planning</li>
-            </div>
-          </ul>
-        </div>
-        <div class="company">Company<img src="./images/icon-arrow-down.svg">
-          <ul>
+        <ul class="feaUl">
+          <div class="feature">Feature<img src="./images/icon-arrow-down.svg"></div>
+          <div class="feaLi">
+            <li><img src="./images/icon-todo.svg"> TodoList</li>
+            <li><img src="./images/icon-calendar.svg"> Calendar</li>
+            <li><img src="./images/icon-reminders.svg"> Reminders</li>
+            <li><img src="./images/icon-planning.svg"> Planning</li>
+          </div>
+        </ul>
+        <ul class="comUl">
+          <div class="company">Company<img src="./images/icon-arrow-down.svg">
             <div class="comLi">
               <li>History</li>
               <li>Our team</li>
               <li>Blog</li>
             </div>
-          </ul>
-        </div>
+        </ul>
         <div>Careers</div>
         <div>About</div>
       </div>
